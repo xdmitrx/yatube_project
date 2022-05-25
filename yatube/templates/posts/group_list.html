@@ -1,8 +1,19 @@
+{% extends 'base.html' %} 
+{% block content %}
 <!DOCTYPE html> 
-<html lang="ru">
-  <head>
+<html lang="ru">          
+  <head>       
   </head>
-  <body>
-    <h1>Пост о разработке сайта</h1>
+  <body>       
+    <header>
+      {% include 'includes/header.html' %}     
+    </header>
+    <main>
+      Список постов
+    </main>
+    <footer>
+      {% include 'includes/footer.html' %} 
+    </footer>
   </body>
 </html> 
+{% endblock %} 
