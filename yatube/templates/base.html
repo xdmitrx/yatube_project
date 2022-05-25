@@ -14,13 +14,14 @@
     <!-- Подключен файл со стандартными стилями бустрап -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <title></title>
-     <header>
-        {% include 'includes/header.html' %} 
-     </header>
-     {% block content %}
-     {% endblock %}
-     <footer>
-        {% include 'includes/footer.html' %}
-      </footer>
+  </head>
+  <body>
+    {% include 'includes/header.html' %}
+    <main> 
+    {% block content %}
+    {% endblock %}
+    </main>
+    {% include 'includes/footer.html' %}
+  </body>
 
          
