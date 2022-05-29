@@ -10,7 +10,6 @@ class PostAdmin(admin.ModelAdmin):
         'author',
         'group',
     )
-
     list_editable = ('group',)
     search_fields = ('text',) 
     list_filter = ('pub_date',) 
