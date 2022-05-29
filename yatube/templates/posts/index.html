@@ -3,7 +3,6 @@
     <title>{{ title }}</title>
   <body>
     <main> 
-      <!-- класс py-5 создает отступы сверху и снизу блока -->
       <div class="container py-5">     
         <h1>{{ text }}</h1>
         <article>
@@ -23,7 +22,9 @@
             и Бабарыкинымъ, ругалъ Сержпутовскому и ничего не сдѣлалъ, вотъ 3 упрека, которыя дѣлаю с
             ебѣ за нынѣшній день. (3)
           </p>
-          <a href="group_list.html">все записи группы</a>
+          {% if post.group %}   
+          <a href="{% url 'posts:group_list' post.group.slug %}">все записи группы</a>
+          {% endif %} 
         </article>
         <hr>
         <article>

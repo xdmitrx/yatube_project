@@ -10,16 +10,17 @@ class Post(models.Model):
         User,
         on_delete=models.CASCADE,
         related_name='posts')
-    group = models.ForeignKey(blank=True, null=True)
+    group = models.ForeignKey(
+        'Group',
+        on_delete=models.CASCADE,
+        related_name='group',
+        blank=True, null=True)
+
 
 class Group(models.Model):
-    title = models.CharField()
+    title = models.CharField(max_length=200)
     slug = models.SlugField()
     description = models.TextField()
-    author = models.ForeignKey(
-        User,
-        on_delete=models.CASCADE,
-        related_name='groups' )  
     
-    def __str__() -> str:
-        print()
+    def __str__(self):
+        return self.title
